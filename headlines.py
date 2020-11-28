@@ -17,7 +17,7 @@ def bbc():
 def cnn():
     return get_news('cnn')
 
-def get_news(publication):
+def get_news(publication="bbc"):
   feed = feedparser.parse(RSS_FEEDS[publication])
   first_article = feed['entries'][0]
   return """<html>
