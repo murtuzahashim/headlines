@@ -20,10 +20,10 @@ def cnn():
 @app.route("/")
 @app.route("/<publication>"
 def get_news(publication="bbc"):
-  feed = feedparser.parse(RSS_FEEDS[publication])
-  render_template("home.html", articles=feed['entries'])
+    feed = feedparser.parse(RSS_FEEDS[publication])
+    render_template("home.html", articles=feed['entries'])
 
 
 
 if __name__ == "__main__":
-  app.run(port=5000, debug=True)
+   app.run(port=5000, debug=True)
