@@ -1,5 +1,9 @@
-<h1>Hello {{ name }}, you are on the home page</h1>
-<h1> Database Results </h1>
-{% for item in results %}
-<h2>ID: {{ item.id }} Name: {{ item.name }} Location {{ item.location}}</h2>
-{% endfor %}
+<body>
+    <h1>Headlines</h1>
+    {% for article in articles %}
+        <b>{{article.title}}</b><br />
+        <i>{{article.published}}</i><br />
+        <p>{{article.summary}}</p>
+        <hr />
+    {% endfor %}
+</body>
